@@ -1,10 +1,18 @@
 ---
 server:
   port: 8888 
+security:
+  basic:
+    enabled: true
+  user:
+    name: test
+    password: test
 spring:
   cloud:
     config:
       server:
+        encrypt:
+          enabled: false
         git:
           uri: https://github.com/toddisaacs/springcloud-config
           #username:
